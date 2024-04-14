@@ -3,74 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meri kaksha | Home </title>
-    <link rel="stylesheet" href="project1.css">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="paymentform.css">
 </head>
 <body>
-    <header>
-    <h1> <center>Meri kaksha </center></h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">College reviews </a>
-        <a href="#">Courses</a>
-        <a href="#">Login/sign up</a>
-    </nav>
-    <main>
-        <section>
-            <h2><center>Courses</center></h2>
-           <video src="video/chemistryvideo.mp4" width="33%" poster="poster/chemistry.jpg"  controls></video>
-           <video src="video/webdev.mp4" width="33%" poster="poster/webdev.jpg" controls></video>
-           <video src="video/maths.mp4" width="33%" poster="poster/maths.jpg" controls></video>
-           <br>
-           <br>
-           <br>
-           <video src="video/chemistryvideo.mp4" width="33%" poster="poster/chemistry1.jpg" controls></video>
-           <video src="video/webdev.mp4" width="33%" poster="poster/web dev1.jpg" controls></video>
-           <video src="video/maths.mp4" width="33%" poster="poster/maths1.jpg " controls></video>
-        </section>
-        <section>
-            <!-- i frame is used to link the video to the website -->
-            <h2><center>College Review</center></h2>
-            <iframe width="33%" height="75%" src="https://www.youtube.com/embed/fvnXA7qavVA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="33%" height="75%" src="https://www.youtube.com/embed/77C01T46YXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="33%" height="75%" src="https://www.youtube.com/embed/D6eL1MVEiCU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-        <section>
-            <h2><center>Study Material</center></h2>
-            <!-- we will put notes inside this study material ans the will in image form -->
-            <!-- target blank is used to open in new tab -->
-         <a target="_blank"   href="notes/CHEMISTRY PPT.pdf"><img src="notes/3663432.jpg" alt="" width="31%" height="45%"></a>
-        <a target="_blank"  href="notes/Food chain and Food web.pdf"> <img src="notes/grazing-food-chain.jpeg" alt="" width="35%" height="60%"></a>
-       <a  target="_blank" href="notes/PCS151 Lab Manual Combined (5).pdf"><img src="notes/2260794.jpg" alt="" width="33%" height="60%"></a>
-    </section>
-    <section>
-        <h2>
-            <center> Founder</center>
-        </h2>
-        <center><img  src="notes/My image.jpeg" alt="this is Paras Mehta" width="20%"></center>
-        <center><b>PARAS MEHTA</b></center>
-        <!-- &nbsp is used for space  -->
-        <a href="https://www.instagram.com/parassmehtaa?igsh=cjVhNDAyNXAyd2Y=" target="_blank" rel="noopener noreferrer"> Instragram</a>&nbsp;&nbsp;|
-    <a href="https://www.linkedin.com/in/paras-mehta-69268a298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank" rel="noopener noreferrer">Linkedin</a>
-        <h3>
-            <center> Hi Everyone myself Paras Mehta,currently i am pursuing Bachelor of Technology in Computer Science from Graphic era hill university bhimtal. 
-                <p>This is my website in which i have used HTML and some CSS to make it attractive i hope you will like it </p>
-                <p><center>THANKS!</center></p>
-            </center>
-        </h3>
-    </section>
-    
+    <form action="" method="get" class="container">
+        <h1 class="main_heading">Payment Form </h1>
+        <hr>
+        <h2>User Information</h2>
+        <p>Name:* <input type="text" name="name" placeholder="paras mehta"  required></p>
+       <fieldset>
+        <legend>Gender *</legend>
+        <p>
+            Male <input type="radio" name="gender" id="male" required>
+            Female <input type="radio" name="gender" id="Female" required>
+        </p>
+    </fieldset>
+    <p>Address: <textarea name="address" id="address"  placeholder="Enter your Address" cols="100" rows="8"></textarea></p>
+    <p>Email:* <input type="email" name="email" id="email" placeholder="parasmehta@gmail.com"  required></p>
+    <p>Pincode:* <input type="number" name="pincode" id="pincode" placeholder="12345" required></p>
+    <h2> Payment Information 
+    </h2>
+    <img src="poster/mastercard.jpg" width="5%" alt="">
+    <img src="poster/visa.png" width="6%" alt="">
+    <img src="poster/rupay.png" width="6%" alt="">
+    <p>Card Type:*
+        <select name="card_type" id="card_type" required>
+            <option value="">Select a Card Type </option>
+            <option value="visa">Visa</option>
+            <option value="rupay">Rupay</option>
+            <option value="MasterCard">MasterCard</option>
+        </select>
+    </p>
+    <p>
+        Card Number *<input type="number" name="card_number" id="card_number" placeholder="1111-2222-3333-4444" required>
+    </p>
+    <p>
+        Expiration Date: *<input type="date" name="exp_date" id="exp_date" required>
+    </p>
+       
+     <p>CVV *<input type="password" name="cvv" id="cvv" placeholder="123" required></p>
 
-    </main>
-   
-    <footer>
-        <a href="#"> FAQ</a>
-        <a href="#"> Contact Us</a>
-        <a href="#"> Terms of Use</a>
-        <a href="#"> Privacy policy</a>
-        <a href="#"> Refund Policy</a>
-        <a href="#">&copy; 2024| Meri Kaksha</a>
-    </footer>
+     <input type="submit" value="Pay now">
+    </form>
 </body>
 </html>
